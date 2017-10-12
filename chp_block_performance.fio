@@ -32,7 +32,7 @@ stonewall
 bs=4k
 rw=randread
 
-[ran.read-4k]
+[ran.write-4k]
 stonewall
 bs=4k
 rw=randwrite
@@ -66,7 +66,7 @@ stonewall
 bs=128k
 rw=randread
 
-[ran.read-128k]
+[ran.write-128k]
 stonewall
 bs=128k
 rw=randwrite

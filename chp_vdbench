@@ -1,0 +1,13 @@
+fsd=default,depth=1,width=1,files=32,size=10g
+fsd=fsd1,anchor=/mnt/a
+fsd=fsd2,anchor=/mnt/b
+fsd=fsd3,anchor=/mnt/c
+
+fwd=default,operation=create,xfersize=1m,fileio=sequential,threads=32
+fwd=fwd1,fsd=fsd1
+fwd=fwd2,fsd=fsd2
+fwd=fwd3,fsd=fsd3
+
+rd=rd1,fwd=fwd1,fwdrate=max,elapsed=10,interval=1
+rd=rd2,fwd=fwd2,fwdrate=max,elapsed=10,interval=1
+rd=rd3,fwd=fwd3,fwdrate=max,elapsed=10,interval=1

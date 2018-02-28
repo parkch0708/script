@@ -1,0 +1,90 @@
+# Hosts Setting
+host=default,user=root,shell=ssh,vdbench=/root/vdbench50403
+host=Linux_Client1, system=Linux_Client1
+host=Linux_Client2, system=Linux_Client2
+host=Linux_Client3, system=Linux_Client3
+host=Linux_Client4, system=Linux_Client4
+
+# File System Definition
+## Client-1 FSD
+fsd=fsd1,anchor=/mnt/testvol/vdbench_dir/a1,depth=1,width=5,files=1,size=4g
+fsd=fsd2,anchor=/mnt/testvol/vdbench_dir/a2,depth=1,width=5,files=1,size=4g
+fsd=fsd3,anchor=/mnt/testvol/vdbench_dir/a3,depth=1,width=5,files=1,size=4g
+fsd=fsd4,anchor=/mnt/testvol/vdbench_dir/a4,depth=1,width=5,files=1,size=4g
+fsd=fsd5,anchor=/mnt/testvol/vdbench_dir/a5,depth=1,width=5,files=1,size=4g
+fsd=fsd6,anchor=/mnt/testvol/vdbench_dir/a6,depth=1,width=5,files=1,size=4g
+fsd=fsd7,anchor=/mnt/testvol/vdbench_dir/a7,depth=1,width=5,files=1,size=4g
+fsd=fsd8,anchor=/mnt/testvol/vdbench_dir/a8,depth=1,width=5,files=1,size=4g
+fsd=fsd9,anchor=/mnt/testvol/vdbench_dir/a9,depth=1,width=5,files=1,size=4g
+fsd=fsd10,anchor=/mnt/testvol/vdbench_dir/a10,depth=1,width=5,files=1,size=4g
+
+## Client-1 FSD
+fsd=fsd11,anchor=/mnt/testvol/vdbench_dir/b1,depth=1,width=5,files=1,size=4g
+fsd=fsd12,anchor=/mnt/testvol/vdbench_dir/b2,depth=1,width=5,files=1,size=4g
+fsd=fsd13,anchor=/mnt/testvol/vdbench_dir/b3,depth=1,width=5,files=1,size=4g
+fsd=fsd14,anchor=/mnt/testvol/vdbench_dir/b4,depth=1,width=5,files=1,size=4g
+fsd=fsd15,anchor=/mnt/testvol/vdbench_dir/b5,depth=1,width=5,files=1,size=4g
+fsd=fsd16,anchor=/mnt/testvol/vdbench_dir/b6,depth=1,width=5,files=1,size=4g
+fsd=fsd17,anchor=/mnt/testvol/vdbench_dir/b7,depth=1,width=5,files=1,size=4g
+fsd=fsd18,anchor=/mnt/testvol/vdbench_dir/b8,depth=1,width=5,files=1,size=4g
+fsd=fsd19,anchor=/mnt/testvol/vdbench_dir/b9,depth=1,width=5,files=1,size=4g
+fsd=fsd20,anchor=/mnt/testvol/vdbench_dir/b10,depth=1,width=5,files=1,size=4g
+
+## Client-1 FSD
+fsd=fsd21,anchor=/mnt/testvol/vdbench_dir/c1,depth=1,width=5,files=1,size=4g
+fsd=fsd22,anchor=/mnt/testvol/vdbench_dir/c2,depth=1,width=5,files=1,size=4g
+fsd=fsd23,anchor=/mnt/testvol/vdbench_dir/c3,depth=1,width=5,files=1,size=4g
+fsd=fsd24,anchor=/mnt/testvol/vdbench_dir/c4,depth=1,width=5,files=1,size=4g
+fsd=fsd25,anchor=/mnt/testvol/vdbench_dir/c5,depth=1,width=5,files=1,size=4g
+fsd=fsd26,anchor=/mnt/testvol/vdbench_dir/c6,depth=1,width=5,files=1,size=4g
+fsd=fsd27,anchor=/mnt/testvol/vdbench_dir/c7,depth=1,width=5,files=1,size=4g
+fsd=fsd28,anchor=/mnt/testvol/vdbench_dir/c8,depth=1,width=5,files=1,size=4g
+fsd=fsd29,anchor=/mnt/testvol/vdbench_dir/c9,depth=1,width=5,files=1,size=4g
+fsd=fsd30,anchor=/mnt/testvol/vdbench_dir/c10,depth=1,width=5,files=1,size=4g
+
+## Client-1 FSD
+fsd=fsd31,anchor=/mnt/testvol/vdbench_dir/d1,depth=1,width=5,files=1,size=4g
+fsd=fsd32,anchor=/mnt/testvol/vdbench_dir/d2,depth=1,width=5,files=1,size=4g
+fsd=fsd33,anchor=/mnt/testvol/vdbench_dir/d3,depth=1,width=5,files=1,size=4g
+fsd=fsd34,anchor=/mnt/testvol/vdbench_dir/d4,depth=1,width=5,files=1,size=4g
+fsd=fsd35,anchor=/mnt/testvol/vdbench_dir/d5,depth=1,width=5,files=1,size=4g
+fsd=fsd36,anchor=/mnt/testvol/vdbench_dir/d6,depth=1,width=5,files=1,size=4g
+fsd=fsd37,anchor=/mnt/testvol/vdbench_dir/d7,depth=1,width=5,files=1,size=4g
+fsd=fsd38,anchor=/mnt/testvol/vdbench_dir/d8,depth=1,width=5,files=1,size=4g
+fsd=fsd39,anchor=/mnt/testvol/vdbench_dir/d9,depth=1,width=5,files=1,size=4g
+fsd=fsd40,anchor=/mnt/testvol/vdbench_dir/d10,depth=1,width=5,files=1,size=4g
+
+# Filesystem Workload Definition
+## Create FWD
+fwd=fwd1,host=Linux_Client1,fsd=(fsd1,fsd2,fsd3,fsd4,fsd5,fsd6,fsd7,fsd8,fsd9,fsd10),operation=create,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd2,host=Linux_Client2,fsd=(fsd11,fsd12,fsd13,fsd14,fsd15,fsd16,fsd17,fsd18,fsd19,fsd20),operation=create,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd3,host=Linux_Client3,fsd=(fsd21,fsd22,fsd23,fsd24,fsd25,fsd26,fsd27,fsd28,fsd29,fsd30),operation=create,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd4,host=Linux_Client4,fsd=(fsd31,fsd32,fsd33,fsd34,fsd35,fsd36,fsd37,fsd38,fsd39,fsd40),operation=create,xfersize=128k,fileio=sequential,threads=30
+
+## Write 100% FWD
+fwd=fwd11,host=Linux_Client1,fsd=(fsd1,fsd2,fsd3,fsd4,fsd5,fsd6,fsd7,fsd8,fsd9,fsd10),operation=write,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd12,host=Linux_Client2,fsd=(fsd11,fsd12,fsd13,fsd14,fsd15,fsd16,fsd17,fsd18,fsd19,fsd20),operation=write,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd13,host=Linux_Client3,fsd=(fsd21,fsd22,fsd23,fsd24,fsd25,fsd26,fsd27,fsd28,fsd29,fsd30),operation=write,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd14,host=Linux_Client4,fsd=(fsd31,fsd32,fsd33,fsd34,fsd35,fsd36,fsd37,fsd38,fsd39,fsd40),operation=write,xfersize=128k,fileio=sequential,threads=30
+
+## Read 100% FWD
+fwd=fwd21,host=Linux_Client1,fsd=(fsd1,fsd2,fsd3,fsd4,fsd5,fsd6,fsd7,fsd8,fsd9,fsd10),operation=read,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd22,host=Linux_Client2,fsd=(fsd11,fsd12,fsd13,fsd14,fsd15,fsd16,fsd17,fsd18,fsd19,fsd20),operation=read,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd23,host=Linux_Client3,fsd=(fsd21,fsd22,fsd23,fsd24,fsd25,fsd26,fsd27,fsd28,fsd29,fsd30),operation=read,xfersize=128k,fileio=sequential,threads=30
+fwd=fwd24,host=Linux_Client4,fsd=(fsd31,fsd32,fsd33,fsd34,fsd35,fsd36,fsd37,fsd38,fsd39,fsd40),operation=read,xfersize=128k,fileio=sequential,threads=30
+
+## Read 70% Write 30% FWD
+fwd=fwd31,host=Linux_Client1,fsd=(fsd1,fsd2,fsd3,fsd4,fsd5,fsd6,fsd7),operation=read,xfersize=128k,fileio=sequential,threads=21
+fwd=fwd32,host=Linux_Client2,fsd=(fsd11,fsd12,fsd13,fsd14,fsd15,fsd16,fsd17),operation=read,xfersize=128k,fileio=sequential,threads=21
+fwd=fwd33,host=Linux_Client3,fsd=(fsd21,fsd22,fsd23,fsd24,fsd25,fsd26,fsd27),operation=read,xfersize=128k,fileio=sequential,threads=21
+fwd=fwd34,host=Linux_Client4,fsd=(fsd31,fsd32,fsd33,fsd34,fsd35,fsd36,fsd37),operation=read,xfersize=128k,fileio=sequential,threads=21
+fwd=fwd35,host=Linux_Client1,fsd=(fsd8,fsd9,fsd10),operation=write,xfersize=128k,fileio=sequential,threads=9
+fwd=fwd36,host=Linux_Client2,fsd=(fsd18,fsd19,fsd20),operation=write,xfersize=128k,fileio=sequential,threads=9
+fwd=fwd37,host=Linux_Client3,fsd=(fsd28,fsd29,fsd30),operation=write,xfersize=128k,fileio=sequential,threads=9
+fwd=fwd38,host=Linux_Client4,fsd=(fsd38,fsd39,fsd40),operation=write,xfersize=128k,fileio=sequential,threads=9
+
+# Run Definition
+rd=rd1,fwd=(fwd1,fwd2,fwd3,fwd4),fwdrate=max,format=yes,interval=1
+rd=rd2,fwd=(fwd11,fwd12,fwd13,fwd14),fwdrate=max,format=no,elapsed=300,interval=1
+rd=rd3,fwd=(fwd21,fwd22,fwd23,fwd24),fwdrate=max,format=no,elapsed=300,interval=1
+rd=rd4,fwd=(fwd31,fwd32,fwd33,fwd34,fwd35,fwd36,fwd37,fwd38),fwdrate=max,format=no,elapsed=300,interval=1

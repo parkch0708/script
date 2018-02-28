@@ -1,0 +1,36 @@
+# Hosts Setting
+host=default,user=root,shell=ssh,vdbench=/root/vdbench50403
+host=Linux_Client1, system=Linux_Client1
+host=Linux_Client2, system=Linux_Client2
+host=Linux_Client3, system=Linux_Client3
+host=Linux_Client4, system=Linux_Client4
+
+# File System Definition
+fsd=fsd1,anchor=/mnt/testvol/vdbench_dir/a1,depth=1,width=1,files=1,size=64GB
+fsd=fsd2,anchor=/mnt/testvol/vdbench_dir/b1,depth=1,width=1,files=1,size=64GB
+fsd=fsd3,anchor=/mnt/testvol/vdbench_dir/c1,depth=1,width=1,files=1,size=64GB
+fsd=fsd4,anchor=/mnt/testvol/vdbench_dir/d1,depth=1,width=1,files=1,size=64GB
+
+# Filesystem Workload Definition
+## Create FWD
+fwd=fwd1,host=Linux_Client1,fsd=fsd1,operation=create,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd2,host=Linux_Client2,fsd=fsd2,operation=create,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd3,host=Linux_Client3,fsd=fsd3,operation=create,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd4,host=Linux_Client4,fsd=fsd4,operation=create,xfersize=1024KB,fileio=sequential,threads=1
+
+## Write FWD
+fwd=fwd11,host=Linux_Client1,fsd=fsd1,operation=write,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd12,host=Linux_Client2,fsd=fsd2,operation=write,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd13,host=Linux_Client3,fsd=fsd3,operation=write,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd14,host=Linux_Client4,fsd=fsd4,operation=write,xfersize=1024KB,fileio=sequential,threads=1
+
+## Read FWD
+fwd=fwd21,host=Linux_Client1,fsd=fsd1,operation=read,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd22,host=Linux_Client2,fsd=fsd2,operation=read,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd23,host=Linux_Client3,fsd=fsd3,operation=read,xfersize=1024KB,fileio=sequential,threads=1
+fwd=fwd24,host=Linux_Client4,fsd=fsd4,operation=read,xfersize=1024KB,fileio=sequential,threads=1
+
+# Run Definition
+rd=rd1,fwd=(fwd1,fwd2,fwd3,fwd4),fwdrate=max,format=yes,interval=1
+rd=rd2,fwd=(fwd11,fwd12,fwd13,fwd14),fwdrate=max,elapsed=300,format=no,interval=1
+rd=rd3,fwd=(fwd21,fwd22,fwd23,fwd24),fwdrate=max,elapsed=300,format=no,interval=1

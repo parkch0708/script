@@ -196,10 +196,10 @@ else
   let g:CSApprox_loaded = 1
 
   " IndentLine
-  let g:indentLine_enabled = 1
-  let g:indentLine_concealcursor = 0
-  let g:indentLine_char = '┆'
-  let g:indentLine_faster = 1
+  "let g:indentLine_enabled = 1
+  "let g:indentLine_concealcursor = 0
+  "let g:indentLine_char = '┆'
+  "let g:indentLine_faster = 1
 
   
   if $COLORTERM == 'gnome-terminal'
@@ -479,8 +479,8 @@ autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 noexpandtab
 " vim-python
 augroup vimrc-python
   autocmd!
-  autocmd FileType python setlocal noexpandtab shiftwidth=8 tabstop=8 colorcolumn=79
-      \ formatoptions+=croq softtabstop=8
+  autocmd FileType python setlocal noexpandtab shiftwidth=4 tabstop=4 colorcolumn=79
+      \ formatoptions+=croq softtabstop=4
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
@@ -554,3 +554,5 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
+set encoding=utf8
